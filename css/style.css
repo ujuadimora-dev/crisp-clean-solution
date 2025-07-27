@@ -343,20 +343,22 @@ textarea.input-control{
     align-self: center;
 }
 .about-img .img-box{
-    max-width: 600px;
+    max-width: 350px;
+    height: 350px;
     margin: auto;
     padding: 15px;
     border-radius: 50%;
-    background-color: var(--bg-color);
+    background: rgb(228, 171, 57);
     box-shadow: var(--shadow);
     position: relative;
 }
 .about-img .img-box img{
-    border-radius: ;
+    max-width: 1500px;
+    height:100%;
 }
 .about-img .box{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     background-color: rgb(255, 0, 183);
     position: absolute;
     display: flex;
@@ -386,6 +388,54 @@ textarea.input-control{
     text-transform: uppercase;
     color: var(--text-dark-gray);
 }
+.animate-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.animate-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animated-list li {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeSlideIn 0.6s ease-out forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+/* Optional: add a little delay for each item */
+.animated-list li:nth-child(1) { --i: 1; }
+.animated-list li:nth-child(2) { --i: 2; }
+.animated-list li:nth-child(3) { --i: 3; }
+.animated-list li:nth-child(4) { --i: 4; }
+.animated-list li:nth-child(5) { --i: 5; }
+.animated-list li:nth-child(6) { --i: 6; }
+.animated-list li:nth-child(7) { --i: 7; }
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animated-list li {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.4s ease-out;
+}
+
+.animated-list li.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
 
 /* serices*/
 .service-item{
@@ -411,7 +461,7 @@ textarea.input-control{
     }
      .service-item:hover .img-box img{
         transform: scale(1.5);
-    }
+    } 
     .service-item h3{
     text-transform: capitalize;
     font-size: var(--fs-xl);
@@ -437,15 +487,24 @@ textarea.input-control{
 }
 
 .team-intro h5 {
-  color: #007BFF;
-  font-weight: bold;
+  font-size: var(--fs-2xl);
+    margin: 0 0 20px;
+    text-transform: capitalize;
+    color: var(--main-color);
+     text-transform: capitalize;
+    font-size: var(--fs-xl);
+    font-weight: 500;
+    
+   
 }
+
 
 .team-intro h2 {
   font-size: 32px;
   margin: 10px 0;
+  
 }
-
+s
 .team-intro p {
   font-size: 16px;
   color: #555;
@@ -454,7 +513,7 @@ textarea.input-control{
 .btn {
   display: inline-block;
   margin-top: 15px;
-  background: #FFDC00;
+  background: rgb(228, 171, 57);
   color: #000;
   padding: 10px 20px;
   text-decoration: none;
@@ -499,7 +558,7 @@ textarea.input-control{
 }
 
 .social-icons a {
-  color: #fff;
+  color: var(--border-color);
   margin: 0 8px;
   font-size: 18px;
 }
@@ -511,23 +570,22 @@ textarea.input-control{
 }
 
 .social-icons a {
-  background-color: yellow;       /* Yellow background */
-  color: #000;                    /* Icon color (black for contrast) */
-  margin: 0 8px;
-  font-size: 18px;
-  width: 35px;
-  height: 35px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;            /* Makes it round */
-  text-decoration: none;
-  transition: 0.3s ease;
+ height: 40px;
+    width: 40px;
+    display: inline-flex;
+    background-color:  rgb(228, 171, 57);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    border: 1px solid transparent;
+    transition: all 0.5s ease;
 }
 
 .social-icons a:hover {
-  background-color: #ffc107;     /* Slightly darker yellow on hover */
-  transform: scale(1.1);
+  background-color: transparent;
+    color: var(--text-white);
+    border-color: initial;
 }
 
 /* contact */
@@ -593,34 +651,131 @@ textarea.input-control{
 }
 
 /* footer */
-.footer{
-    padding: 50px 0;
-    background-color: var(--main-color);
-    text-align: center;
+.faq-footer-section {
+  background-color:var(--main-color);
+  padding: 10px 0;
 }
-.footer h3{
-    color: var(--text-white);
-    font-size: var(--fs-2xl);
-    margin: 0 0 15px;
-    font-weight: 300;
-    text-transform: capitalize;
+.footer-content {
+  margin-top: 100px; /* pushes the content down */
 }
-.footer .social-links a{
-    height: 40px;
-    width: 40px;
-    display: inline-flex;
-    background-color: var(--bg-white);
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    margin: 0 4px;
-    border: 1px solid transparent;
-    transition: all 0.5s ease;
-}
-.footer .social-links a:hover{
-    background-color: transparent;
-    color: var(--text-white);
-    border-color: initial;
 
+
+faq-footer-section {
+  background-color: blue;
+  padding: 20px 0;
+}
+
+.faq-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: start;
+}
+
+/* Shared Card Styles for FAQ & Footer */
+.faq, .footer {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 30px;
+  color: var(--text-white);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq:hover, .footer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* FAQ Styling */
+.faq h3, .faq-item p {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item:hover p {
+  color: #ffec99;
+  transform: translateX(5px);
+}
+
+/* Footer Styling */
+.footer {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 30px;
+  border-radius: 12px;
+  color: var(--text-white);
+}
+
+.footer h3 {
+  color: var(--text-white);
+  font-size: var(--fs-2xl);
+  margin-bottom: 15px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.footer .social-links a {
+  height: 40px;
+  width: 40px;
+  display: inline-flex;
+  background-color: var(--bg-white);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px;
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+  color: var(--main-color);
+}
+
+.footer .social-links a:hover {
+  background-color: transparent;
+  color: var(--text-white);
+  border-color: var(--text-white);
+}
+
+/* FAQ Styling */
+.faq {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 30px;
+  border-radius: 12px;
+  color: var(--text-white);
+}
+
+.faq h3 {
+  font-size: var(--fs-xl, 24px);
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-item p {
+  margin: 5px 0;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .faq-footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer,
+  .faq {
+    text-align: center;
+  }
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 14px;
+  color: var(--text-dark-gray);
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 15px;
 }
 
