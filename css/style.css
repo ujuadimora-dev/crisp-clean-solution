@@ -971,6 +971,43 @@ faq-footer-section {
   }
 }
 
+@media (max-width: 768px) {
+  .home {
+    padding: 40px 20px; /* reduce top/bottom spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-text,
+  .home-img {
+    grid-column: span 12;
+    width: 100%;
+  }
+
+  .home-text h1 {
+    font-size: var(--fs-xl); /* smaller heading */
+    margin-bottom: 7px;
+  }
+
+  .home-text p {
+    font-size: var(--fs-base); /* reduce paragraph size */
+    margin-bottom: 20px;
+  }
+
+  .home-img img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .home-img .circle {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
 /* Extra Small Screens (≤480px) */
 @media (max-width: 480px) {
   .header {
@@ -1066,6 +1103,26 @@ faq-footer-section {
 
   .home-img img {
     max-width: 220px;
+  }
+}
+/*  home con*/
+
+/* Hide mobile version by default */
+.mobile-only {
+  display: none;
+}
+
+/* Hide desktop text & show mobile version on small screens */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline;
+    font-size: 22px;
+    line-height: 1.3;
+    text-align: center;
   }
 }
 
@@ -1336,3 +1393,7 @@ faq-footer-section {
     font-size: 12px;
   }
 }
+
+
+
+

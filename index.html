@@ -25,22 +25,19 @@
 
         <!-- header start here-->
         <header class="header js-header">
-            <div class=" container">
+            <div class="container">
                 <div class="logo">
                     <img src="images/logo.png" alt="Crisp & Clean Solutions Logo" width="80" height="70"
                         style="margin-left: 30px;">
-
                     <a href="index.html">Crisp & Clean<span>Solutions</span></a>
                 </div>
-                <!-- Add this inside your HTML near the logo -->
+
+                <!-- Only one burger button -->
                 <button class="nav-toggler"><i class="fas fa-bars"></i></button>
 
-                <button type=" button" class="nav-toggler js-nav-toggler">
-                    <span></span>
-                </button>
                 <nav class="nav js-nav">
                     <ul>
-                        <li><a href="index.html">Home</a></li> <!-- Link to another page -->
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#projects">Projects</a></li>
@@ -50,13 +47,17 @@
                 </nav>
             </div>
         </header>
+
         <!-- here end the header-->
         <section class="home" id="home">
             <div class="container">
                 <div class="grid">
                     <div class="home-text">
-                        <h1>Welcome to Crisp & Clean Solutions
-                            Service</h1>
+                        <h1>
+                            <span class="desktop-only">Welcome to Crisp & Clean Solutions Service</span>
+                            <span class="mobile-only">Crisp & Clean</span>
+                        </h1>
+
                         <p>At Crisp & Clean Solutions, we specialize in delivering comprehensive, high-quality cleaning
                             services tailored to meet the unique needs of residential, commercial, and industrial
                             clients.
@@ -307,7 +308,6 @@
                         </div>
                         <h3>Industrial Cleaning</h3>
                     </div>
-
         </section>
 
 
@@ -347,24 +347,25 @@
                     </div>
 
                     <div class="contact-form">
-  <form action="https://formspree.io/f/meozrkqj" method="POST">
-    <div class="input-box">
-      <input type="text" name="name" placeholder="Name" class="input-control" required>
-    </div>
-    <div class="input-box">
-      <input type="email" name="email" placeholder="Email" class="input-control" required>
-    </div>
-    <div class="input-box">
-      <input type="tel" name="phone" placeholder="Phone" class="input-control" required>
-    </div>
-    <div class="input-box">
-      <textarea name="message" placeholder="Message" class="input-control" required></textarea>
-    </div>
-    <div class="btn-wrap">
-      <button type="submit" class="btn">Send Message</button>
-    </div>
-  </form>
-</div>
+                        <form action="https://formspree.io/f/meozrkqj" method="POST">
+                            <div class="input-box">
+                                <input type="text" name="name" placeholder="Name" class="input-control" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="email" name="email" placeholder="Email" class="input-control" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="tel" name="phone" placeholder="Phone" class="input-control" required>
+                            </div>
+                            <div class="input-box">
+                                <textarea name="message" placeholder="Message" class="input-control"
+                                    required></textarea>
+                            </div>
+                            <div class="btn-wrap">
+                                <button type="submit" class="btn">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
 
                 </div>
             </div>
