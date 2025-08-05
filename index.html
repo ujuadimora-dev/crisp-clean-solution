@@ -87,7 +87,7 @@
                         <div class="img-box">
                             <img src="images/about-image.png" alt="img">
                             <div class="box box-1">
-                                <span>250</span>
+                                <span>200</span>
                                 <p>Happy clients</p>
                             </div>
                         </div>
@@ -347,24 +347,25 @@
                     </div>
 
                     <div class="contact-form">
-                        <form>
-                            <div class="input-box">
-                                <input type="text" placeholder="Name" class="input-control" required>
-                            </div>
-                            <div class="input-box">
-                                <input type="email" placeholder="Email" class="input-control" required>
-                            </div>
-                            <div class="input-box">
-                                <input type="tel" placeholder="Phone" class="input-control" required>
-                            </div>
-                            <div class="input-box">
-                                <textarea placeholder="Message" class="input-control" required></textarea>
-                            </div>
-                            <div class="btn-wrap">
-                                <button type="submit" class="btn">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
+  <form action="https://formspree.io/f/meozrkqj" method="POST">
+    <div class="input-box">
+      <input type="text" name="name" placeholder="Name" class="input-control" required>
+    </div>
+    <div class="input-box">
+      <input type="email" name="email" placeholder="Email" class="input-control" required>
+    </div>
+    <div class="input-box">
+      <input type="tel" name="phone" placeholder="Phone" class="input-control" required>
+    </div>
+    <div class="input-box">
+      <textarea name="message" placeholder="Message" class="input-control" required></textarea>
+    </div>
+    <div class="btn-wrap">
+      <button type="submit" class="btn">Send Message</button>
+    </div>
+  </form>
+</div>
+
                 </div>
             </div>
         </section>

@@ -444,7 +444,7 @@ textarea.input-control{
     color: var(--text-white);
     font-size: var(--fs-sm);
     text-transform: uppercase;
-    color: var(--text-dark-gray);
+    
 }
 .animate-text {
   opacity: 0;
