@@ -11,3 +11,15 @@ const headerBg = ()=> {
     });
 }
 headerBg();
+
+// JavaScript to toggle the nav menu
+document.addEventListener("DOMContentLoaded", () => {
+  const toggler = document.querySelector(".nav-toggler");
+  const nav = document.querySelector(".nav");
+
+  if (toggler && nav) {
+    toggler.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
+  }
+});

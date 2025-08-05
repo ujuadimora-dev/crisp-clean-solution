@@ -5,13 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <link type="text/css" rel="stylesheet" href="style-switcher.css" />
+    <link type="text/css" rel="stylesheet" href="css/style-switcher.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <title> Crisp & Clean Solutions</title>
 </head>
 
-<body >
+<body>
+    <div class=preloader-wrap>
+        <div class=d-table>
+            <div class=d-tablecell>
+                <img src="images/loader.gif" />
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
     <!--page wrpper start here-->
     <div class="page-wrapper">
 
@@ -22,19 +30,22 @@
                     <img src="images/logo.png" alt="Crisp & Clean Solutions Logo" width="80" height="70"
                         style="margin-left: 30px;">
 
-                    <a href="#">Crisp & Clean<span>Solutions</span></a>
+                    <a href="index.html">Crisp & Clean<span>Solutions</span></a>
                 </div>
+                <!-- Add this inside your HTML near the logo -->
+                <button class="nav-toggler"><i class="fas fa-bars"></i></button>
+
                 <button type=" button" class="nav-toggler js-nav-toggler">
                     <span></span>
                 </button>
                 <nav class="nav js-nav">
                     <ul>
-                        <li><a href="#Home">Home</a></li>
-                        <li><a href="#About">About</a></li>
-                        <li><a href="#Services">Services</a></li>
-                        <li><a href="#Projects">Projects</a></li>
-                        <li><a href="#Team">Team</a></li>
-                        <li><a href="#Contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li> <!-- Link to another page -->
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -53,7 +64,7 @@
                             committed to
                             creating healthier, more inviting spaces for our clients, one clean at a time</p>
                         <div class="btn-wrap">
-                            <a href="#about" class="btn">More Info</a>
+                            <a href="#contact" class="btn">More Info</a>
                         </div>
                     </div>
                     <div class="home-img">
@@ -189,7 +200,7 @@
         <!-- service section ends here -->
         <!-- team here-->
         <section class="team-section">
-            <div class="container team-container">
+            <div class="container team-container" id="team">
                 <!-- Left: Intro Text -->
                 <div class="team-intro">
                     <h5><span></span></h5>
@@ -206,7 +217,7 @@
                 <!-- Right: Team Cards -->
                 <div class="team-members">
                     <div class="team-card">
-                        <img src="images/team2.jpg" alt="Lloyd Wilson">
+                        <img src="images/team2.jpg" alt="team2">
                         <div class="team-info">
                             <h3>Ada Obi</h3>
                             <p>Admin staff</p>
@@ -220,7 +231,7 @@
                     </div>
 
                     <div class="team-card">
-                        <img src="images/team1.jpg" alt="Lloyd Wilson">
+                        <img src="images/team1.jpg" alt="team1">
                         <div class="team-info">
                             <h3>Mike</h3>
                             <p>IT Personnel</p>
@@ -234,7 +245,7 @@
                     </div>
 
                     <div class="team-card">
-                        <img src="images/team3.jpg" alt="Lloyd Wilson">
+                        <img src="images/team3.jpg" alt="team3">
                         <div class="team-info">
                             <h3>Jane</h3>
                             <p>Receptionish</p>
@@ -251,11 +262,11 @@
             </div>
         </section>
 
-        <!-- project start here -->
-        <section class="services section-padding" id="services">
+        <!-- latest project start here -->
+        <section class="services section-padding" id="projects">
             <div class="container">
                 <div class="section-title">
-                    <span class="title">lastest Projects</span>
+                    <span class="title">Lastest Projects</span>
                     <h2 class="sub-title">
                         Clients praised our attention to detail, eco-friendly products, and professional staff.
                     </h2>
@@ -264,7 +275,7 @@
                     <!-- service item starts here -->
                     <div class="service-item">
                         <div class="img-box">
-                            <img src="images/Residential_project.png"
+                            <img src="images/Vacation Rental  Airbnb Cleaning.png"
                                 alt="Vacation Rental / Airbnb Cleaning">
                         </div>
                         <h3>Vacation Rental / Airbnb Cleaning</h3>
@@ -274,8 +285,7 @@
                     <!-- service item starts here -->
                     <div class="service-item">
                         <div class="img-box">
-                            <img src="images/_Commercial Space Janitorial Service_project.png"
-                                alt="Residential Cleaning">
+                            <img src="images/Residential_project.png" alt="Residential Cleaning">
                         </div>
                         <h3>Residential Cleaning</h3>
                     </div>
@@ -406,6 +416,7 @@
                 </div>
 
             </div>
+
             <div class="footer-bottom">
                 © 2025 Crisp & Clean Solutions. All rights reserved.
             </div>
@@ -413,34 +424,54 @@
 
         <!-- style switcher start-->
         <div class="style-switcher js-style-switcher">
-            <button type="button" class="style-switcher-toggler js-style-switcher-toggler">
+            <button type="button" class="style-switcher-toggler js-style-switcher-toggler"
+                aria-label="Toggle style switcher">
                 <i class="fas fa-cog"></i>
             </button>
             <div class="style-switcher-main">
-                <h2>style switcher</h2>
+                <h2>Style Switcher</h2>
                 <div class="style-switcher-item">
-                    <p>Theme color</p>
+                    <p>Theme Color</p>
                     <div class="theme-color">
-                        <input type="range" min="0" max="360" class="hue-slider js-hue-slider">
+                        <input type="range" min="0" max="360" name="hue" class="hue-slider js-hue-slider">
                         <div class="hue">Hue: <span class="js-hue"></span></div>
                     </div>
                 </div>
                 <div class="style-switcher-item">
                     <label class="form-switch">
                         <span>Dark Mode</span>
-                        <input type="checkbox" class="js-dark-mode">
+                        <input type="checkbox" class="js-dark-mode" aria-label="Toggle dark mode">
                         <div class="box"></div>
                     </label>
-
                 </div>
             </div>
         </div>
 
-
-
         <script src="js/script.js"></script>
-         <script src="js/style-switcher.js"></script>
-        
+        <script src="js/style-switcher.js"></script>
+        <script>
+            window.addEventListener("load", function () {
+                setTimeout(function () {
+                    // Hide the preloader
+                    const preloader = document.querySelector(".preloader-wrap");
+                    if (preloader) {
+                        preloader.style.display = "none";
+                    }
+
+                    // Scroll to section if sessionStorage flag is set
+                    const target = sessionStorage.getItem("scrollTo");
+                    if (target) {
+                        const el = document.getElementById(target);
+                        if (el) {
+                            setTimeout(() => {
+                                el.scrollIntoView({ behavior: "smooth" });
+                                sessionStorage.removeItem("scrollTo"); // Clean up
+                            }, 100); // Allow layout to settle
+                        }
+                    }
+                }, 1000); // Match your preloader delay
+            });
+        </script>
 
 </body>
 
